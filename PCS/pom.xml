@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.pointuseg</groupId>
+    <artifactId>pcs</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- Add your dependencies here, for example: -->
+        <!-- https://mvnrepository.com/artifact/org.swinglabs.swingx/swingx-all -->
+        <dependency>
+            <groupId>org.swinglabs.swingx</groupId>
+            <artifactId>swingx-all</artifactId>
+            <version>1.6.5-1</version>
+        </dependency>
+        <!-- RANSAC -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math3</artifactId>
+            <version>3.6.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.github.elki-project/elki -->
+        <dependency>
+            <groupId>io.github.elki-project</groupId>
+            <artifactId>elki</artifactId>
+            <version>0.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.8.1</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <mainClass>com.pointuseg.pcs.PCS</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+</project>
